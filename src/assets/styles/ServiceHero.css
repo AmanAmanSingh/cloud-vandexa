@@ -1,0 +1,44 @@
+.service-hero {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease-out forwards;
+
+    .text-section {
+        animation: fadeInLeft 1s ease-out forwards;
+        animation-delay: 0.2s;
+    }
+
+    .image-section {
+        animation: rotateImage 1.2s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
